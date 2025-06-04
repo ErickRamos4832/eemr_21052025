@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Pequeño videojuego en primera persona desarrollado en javascript y ThreeJS">
+        <meta name="keywords" content="ufg, estudiantes, canvas, juego, primera, persona. javascript, three, js">
+        <meta name="author" content="Erick Eduardo Martinez Ramos">
+        <meta name="copyright" content="2025 EEMR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Videojuego en primera persona, Erick Eduardo Martinez Ramos</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="manifest" href="./manifest.json">
+    </head>
+    <body>
+
+        <div id="blocker">
+            <div id="instructions">
+                <div id="playButton">
+                    Jugar !!
+                    <p>
+                        ESC - Ir al menu <br />
+                        W,A,S,D - Movimientos laterales y frontales <br />
+                        Click Izquierdo - Disparo <br />
+                        Barra Espaceadora - Disparo <br />
+                        M - Reproducir / Pausar el sonido
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <img id="crosshair" src="media/reticle.png" alt="Crosshair">
+
+        <script src="https://cdn.jsdelivr.net/npm/three@latest/build/three.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@latest/examples/js/controls/PointerLockControls.js"></script>
+        <script type="module" src="js/script.js"></script>
+        <script>
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js', {scope: './'});
+            }
+        </script>
+    </body>
+</html>
